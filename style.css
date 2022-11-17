@@ -16,7 +16,7 @@ a {
   color: inherit;
   display: inline-block;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
   position: relative;
 }
 
@@ -465,6 +465,10 @@ img {
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
+.news-card .card-image {
+  overflow: hidden;
+}
+
 .news-card .card-image a {
   display: block;
 }
@@ -475,6 +479,11 @@ img {
   height: 150px;
   object-fit: cover;
   object-position: top;
+  transition: transform 0.25s ease-in-out;
+}
+
+.news-card .card-image img:hover {
+  transform: scale(1.15);
 }
 
 .news-card .card-title {
@@ -554,6 +563,7 @@ img {
   text-align: center;
   padding: 0.75rem 0;
   cursor: pointer;
+  font-weight: 500;
   border-bottom: 3px solid rgba(0, 0, 0, 0.1);
   transition: border-bottom 0.25s ease-in-out, color 0.25s ease-in-out;
 }
@@ -571,13 +581,17 @@ img {
   display: grid;
 }
 
-.tabs .tab-content.ozs .tab-content-item {
+.tabs .tab-content.two-col .tab-content-item {
   grid-template-columns: auto 1fr;
 }
 
 .tabs .tab-content-item:not(:last-of-type) {
   padding-bottom: 0.75rem;
   border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.tabs .tab-content-item {
+  line-height: 1.5rem;
 }
 
 .tabs .tab-content-item a {
@@ -588,7 +602,7 @@ img {
   text-decoration: underline;
 }
 
-.tabs .tab-content.ozs .tab-content-item .description {
+.tabs .tab-content .tab-content-item .title {
   padding: 0 0.75rem 0.75rem 0.75rem;
 }
 
@@ -598,7 +612,7 @@ img {
   font-size: 0.8rem;
 }
 
-.tabs .tab-content.ozz .description {
+.tabs .tab-content .description {
   margin-top: 0.5rem;
 }
 
