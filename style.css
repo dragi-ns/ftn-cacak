@@ -721,6 +721,69 @@ img {
   }
 }
 
+/* CONTACT */
+
+#contact {
+  display: flex;
+  background-color: #f9f9f9;
+}
+
+#contact address {
+  padding: 1rem;
+  border-radius: 10px;
+  font-style: normal;
+  background-color: #ecf0f1;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#contact address ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+#contact address li {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#contact address .icon {
+  font-size: 1.2rem;
+  color: #78070a;
+}
+
+#contact .map-container iframe {
+  max-height: 800px;
+  min-height: 400px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+@media only screen and (min-width: 850px) {
+  #contact .wrapper {
+    margin-top: 2.5rem;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  #contact address {
+    flex: 1;
+    align-self: flex-start;
+  }
+
+  #contact .map-container {
+    flex: 2;
+    min-height: 50vh;
+    margin-bottom: 0;
+  }
+}
+
 /* KEYFRAMES */
 
 @keyframes shake {
