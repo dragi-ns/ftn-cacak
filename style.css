@@ -42,7 +42,7 @@ img {
 }
 
 :target:not(#about) {
-  scroll-margin-top: max(100px, 12vh);
+  scroll-margin-top: max(100px, 10vh);
 }
 
 /* UTILS */
@@ -438,7 +438,7 @@ img {
 
 @media only screen and (min-width: 1200px) {
   #about {
-    min-height: calc(100vh - 146px - 41px);
+    min-height: calc(100vh - 113px - 41px);
     display: flex;
     justify-content: center;
     align-items: center;
