@@ -1,3 +1,8 @@
+window.addEventListener('load', () => {
+  const preloader = document.querySelector('#preloader');
+  preloader.classList.remove('active');
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   // Mobile navigation
   const openMenu = document.querySelector('#menu-btn');
