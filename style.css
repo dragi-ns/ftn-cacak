@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #ecf0f1;
   color: #1c1c1c;
@@ -31,6 +35,14 @@ button {
 
 img {
   max-width: 100%;
+}
+
+:target#about {
+  scroll-margin-top: 150px;
+}
+
+:target:not(#about) {
+  scroll-margin-top: max(100px, 12vh);
 }
 
 /* UTILS */
@@ -212,12 +224,15 @@ img {
   z-index: 10;
   color: #ecf0f1;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  position: sticky;
+  top: 0;
 }
 
 .primary-header .container {
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  padding: 0.5rem 0.75rem;
 }
 
 .primary-header ul {
@@ -257,6 +272,8 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 3rem 0;
+  overflow-y: auto;
   gap: 2.75rem;
   transform: translateX(50%);
   visibility: hidden;
@@ -306,6 +323,12 @@ img {
   cursor: pointer;
 }
 
+@media only screen and (max-height: 430px) {
+  .primary-header #nav-list {
+    justify-content: flex-start;
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .primary-header #menu-btn,
   .primary-header #close-btn {
@@ -315,6 +338,8 @@ img {
   .primary-header #nav-list {
     position: static;
     visibility: visible;
+    overflow-y: visible;
+    padding: 0;
     opacity: 1;
     transform: translateX(0%);
     flex-direction: row;
