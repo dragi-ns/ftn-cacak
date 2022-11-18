@@ -784,6 +784,18 @@ img {
   }
 }
 
+/* PRIMARY FOOTER */
+.primary-footer {
+  background-color: #970b10;
+  color: #ecf0f1;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.primary-footer a {
+  color: inherit;
+}
+
 /* KEYFRAMES */
 
 @keyframes shake {
