@@ -1,6 +1,11 @@
 window.addEventListener('load', () => {
   const preloader = document.querySelector('#preloader');
   preloader.classList.remove('active');
+
+  const heroLeft = document.querySelector('.hero-left');
+  const heroRight = document.querySelector('.hero-right');
+  heroLeft.classList.add('animate');
+  heroRight.classList.add('animate');
 });
 
 document.addEventListener('DOMContentLoaded', () => {
